@@ -149,7 +149,7 @@
       "ubicacion": "Mall Galerias del Valle"
     }
   ],
-  "tipo articulo": [
+  "tipoArticulo": [
     {
       "id": 1,
       "tipo": "camisa"

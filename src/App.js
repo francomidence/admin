@@ -42,12 +42,8 @@ const App = () => (
     ></Resource>
     <Resource name="usuario" list={ListGuesser} icon={UserIcon}></Resource>
     <Resource name="articulo" list={ListGuesser} icon={ListIcon}></Resource>
-    <Resource
-      name="tipo articulo"
-      list={ListGuesser}
-      icon={ListIcon}
-    ></Resource>
-    <Resource name="tienda" list={ListGuesser} icon={ListIcon}></Resource>
+    <Resource name="tipo articulo" list={ListGuesser}></Resource>
+    <Resource name="tienda" list={ListGuesser}></Resource>
     <Resource
       name="orden"
       list={ListGuesser}
