@@ -134,5 +134,33 @@
       "Gran Total": 601.98,
       "Estatus Entrega": "Pendiente"
     }
+  ],
+  "tienda": [
+    {
+      "id": 1,
+      "ubicacion": "City Mall"
+    },
+    {
+      "id": 2,
+      "ubicacion": "Mall multiplaza"
+    },
+    {
+      "id": 3,
+      "ubicacion": "Mall Galerias del Valle"
+    }
+  ],
+  "tipo articulo": [
+    {
+      "id": 1,
+      "tipo": "camisa"
+    },
+    {
+      "id": 2,
+      "tipo": "jean"
+    },
+    {
+      "id": 3,
+      "tipo": "zapato"
+    }
   ]
 }

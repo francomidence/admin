@@ -3,6 +3,7 @@ import React from 'react';
 import { Admin, Resource, ListGuesser } from 'react-admin';
 import { UserList } from './Components/users';
 import { PostList, PostEdit, PostCreate } from './Components/posts';
+import { ArticleCreate, ArticleEdit, ArticleList } from './Components/article';
 import jsonServerProvider from 'ra-data-json-server';
 import './App.css';
 //Icons
@@ -32,13 +33,21 @@ const App = () => (
       create={PostCreate}
       icon={PostIcon}
     ></Resource>
+    <Resource
+      name="articulo"
+      list={ArticleList}
+      edit={ArticleEdit}
+      create={ArticleCreate}
+      icon={ListIcon}
+    ></Resource>
     <Resource name="usuario" list={ListGuesser} icon={UserIcon}></Resource>
     <Resource name="articulo" list={ListGuesser} icon={ListIcon}></Resource>
     <Resource
-      name="motorista"
+      name="tipo articulo"
       list={ListGuesser}
-      icon={MotorcycleIcon}
+      icon={ListIcon}
     ></Resource>
+    <Resource name="tienda" list={ListGuesser} icon={ListIcon}></Resource>
     <Resource
       name="orden"
       list={ListGuesser}
