@@ -2,74 +2,987 @@
   "usuario": [
     {
       "id": 1,
-      "Nombre": "admin",
-      "Tienda Perteneciente": "City mall",
-      "Telefono": "9825-5623",
-      "Tipo Usuario": "administrador"
+      "Nombre Usuario": "Robyn",
+      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Telefono": "481-960-0802",
+      "Tipo Usuario": "Usuario"
     },
     {
       "id": 2,
-      "Nombre": "usuario",
-      "Tienda Perteneciente": "Mall galerias del valle",
-      "Telefono": "8956-2312",
-      "Tipo Usuario": "usuario"
+      "Nombre Usuario": "Cynthia",
+      "Tienda Perteneciente": "Mall Multiplaza",
+      "Telefono": "861-457-6787",
+      "Tipo Usuario": "Administrador"
     },
     {
       "id": 3,
-      "Nombre": "motorista",
-      "Tienda Perteneciente": "Ninguna",
-      "Telefono": "9985-2648",
-      "Tipo Usuario": "motorista"
+      "Nombre Usuario": "Lauri",
+      "Tienda Perteneciente": "Mall Multiplaza",
+      "Telefono": "256-184-3829",
+      "Tipo Usuario": "Administrador"
+    },
+    {
+      "id": 4,
+      "Nombre Usuario": "Ralf",
+      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Telefono": "520-412-0882",
+      "Tipo Usuario": "Usuario"
+    },
+    {
+      "id": 5,
+      "Nombre Usuario": "Ced",
+      "Tienda Perteneciente": "Mall Multiplaza",
+      "Telefono": "243-970-6503",
+      "Tipo Usuario": "Usuario"
+    },
+    {
+      "id": 6,
+      "Nombre Usuario": "Theodoric",
+      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Telefono": "129-252-4825",
+      "Tipo Usuario": "Motorista"
+    },
+    {
+      "id": 7,
+      "Nombre Usuario": "Robers",
+      "Tienda Perteneciente": "Mall Multiplaza",
+      "Telefono": "145-538-9317",
+      "Tipo Usuario": "Motorista"
+    },
+    {
+      "id": 8,
+      "Nombre Usuario": "Barclay",
+      "Tienda Perteneciente": "Mall Multiplaza",
+      "Telefono": "267-372-4932",
+      "Tipo Usuario": "Administrador"
+    },
+    {
+      "id": 9,
+      "Nombre Usuario": "Marilee",
+      "Tienda Perteneciente": "City Mall",
+      "Telefono": "578-980-1023",
+      "Tipo Usuario": "Administrador"
+    },
+    {
+      "id": 10,
+      "Nombre Usuario": "Goddart",
+      "Tienda Perteneciente": "Mall Multiplaza",
+      "Telefono": "814-387-7384",
+      "Tipo Usuario": "Administrador"
+    },
+    {
+      "id": 11,
+      "Nombre Usuario": "Homere",
+      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Telefono": "645-516-6632",
+      "Tipo Usuario": "Administrador"
+    },
+    {
+      "id": 12,
+      "Nombre Usuario": "Stefania",
+      "Tienda Perteneciente": "Mall Multiplaza",
+      "Telefono": "862-647-2693",
+      "Tipo Usuario": "Administrador"
+    },
+    {
+      "id": 13,
+      "Nombre Usuario": "Demetra",
+      "Tienda Perteneciente": "Mall Multiplaza",
+      "Telefono": "404-531-6016",
+      "Tipo Usuario": "Administrador"
+    },
+    {
+      "id": 14,
+      "Nombre Usuario": "Emmalee",
+      "Tienda Perteneciente": "City Mall",
+      "Telefono": "614-968-7043",
+      "Tipo Usuario": "Motorista"
+    },
+    {
+      "id": 15,
+      "Nombre Usuario": "Gaspard",
+      "Tienda Perteneciente": "Mall Multiplaza",
+      "Telefono": "497-113-5174",
+      "Tipo Usuario": "Motorista"
+    },
+    {
+      "id": 16,
+      "Nombre Usuario": "Lyndsie",
+      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Telefono": "453-513-2855",
+      "Tipo Usuario": "Motorista"
+    },
+    {
+      "id": 17,
+      "Nombre Usuario": "Ardis",
+      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Telefono": "377-629-4160",
+      "Tipo Usuario": "Motorista"
+    },
+    {
+      "id": 18,
+      "Nombre Usuario": "Kristy",
+      "Tienda Perteneciente": "Mall Multiplaza",
+      "Telefono": "485-340-6643",
+      "Tipo Usuario": "Motorista"
+    },
+    {
+      "id": 19,
+      "Nombre Usuario": "Nancee",
+      "Tienda Perteneciente": "Mall Multiplaza",
+      "Telefono": "150-781-1012",
+      "Tipo Usuario": "Administrador"
+    },
+    {
+      "id": 20,
+      "Nombre Usuario": "Beulah",
+      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Telefono": "869-913-9926",
+      "Tipo Usuario": "Administrador"
+    },
+    {
+      "id": 21,
+      "Nombre Usuario": "Laughton",
+      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Telefono": "735-741-1031",
+      "Tipo Usuario": "Administrador"
+    },
+    {
+      "id": 22,
+      "Nombre Usuario": "Joachim",
+      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Telefono": "732-559-8708",
+      "Tipo Usuario": "Administrador"
+    },
+    {
+      "id": 23,
+      "Nombre Usuario": "Marielle",
+      "Tienda Perteneciente": "City Mall",
+      "Telefono": "205-734-8819",
+      "Tipo Usuario": "Usuario"
+    },
+    {
+      "id": 24,
+      "Nombre Usuario": "Herman",
+      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Telefono": "155-378-1494",
+      "Tipo Usuario": "Motorista"
+    },
+    {
+      "id": 25,
+      "Nombre Usuario": "Nolan",
+      "Tienda Perteneciente": "City Mall",
+      "Telefono": "972-440-7456",
+      "Tipo Usuario": "Administrador"
     }
   ],
   "articulo": [
     {
       "id": 1,
-      "Tipo Articulo": "Jean",
-      "Precio": 250.99,
-      "Talla": "M",
-      "Nombre Articulo": "Pepe Jean Azul Marino",
-      "Comentarios": "Jean azul marino con bordes cafe oscuro"
-    },
-    {
-      "id": 2,
-      "Tipo Articulo": "Camisa",
-      "Precio": 300.99,
-      "Talla": "L",
-      "Nombre Articulo": "Polo Ralph Lauren Negra",
-      "Comentarios": "Camiseta polo negra con mangas rojas"
-    },
-    {
-      "id": 3,
       "Tipo Articulo": "Zapato",
-      "Precio": 350.99,
-      "Talla": "10",
-      "Nombre Articulo": "Hush Puppies Cafe",
-      "Comentarios": "Zapatos marca Hush Puppies Cafe claro con cordones cafe oscuro"
-    }
-  ],
-  "motorista": [
-    {
-      "id": 1,
-      "Nombre": "Jose Perez",
-      "Telefono": "9856-2345"
+      "Precio": "$112.75",
+      "Talla": "S",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Mauv"
     },
     {
       "id": 2,
-      "Nombre": "Juan Mendez",
-      "Telefono": "8945-1547"
+      "Tipo Articulo": "Jean",
+      "Precio": "$31.65",
+      "Talla": "XL",
+      "Nombre Articulo": "Nike",
+      "Comentarios": "Mauv"
     },
     {
       "id": 3,
-      "Nombre": "Pedro Fernandez",
-      "Telefono": "9963-5825"
+      "Tipo Articulo": "Camisa",
+      "Precio": "$62.03",
+      "Talla": "S",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Mauv"
+    },
+    {
+      "id": 4,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$127.76",
+      "Talla": "XS",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Green"
+    },
+    {
+      "id": 5,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$81.17",
+      "Talla": "XXL",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Red"
+    },
+    {
+      "id": 6,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$104.42",
+      "Talla": "XS",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Indigo"
+    },
+    {
+      "id": 7,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$126.69",
+      "Talla": "M",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Goldenrod"
+    },
+    {
+      "id": 8,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$31.59",
+      "Talla": "XXL",
+      "Nombre Articulo": "Ralph Lauren",
+      "Comentarios": "Yellow"
+    },
+    {
+      "id": 9,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$129.62",
+      "Talla": "S",
+      "Nombre Articulo": "Louis Vitton",
+      "Comentarios": "Orange"
+    },
+    {
+      "id": 10,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$46.27",
+      "Talla": "L",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Khaki"
+    },
+    {
+      "id": 11,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$114.73",
+      "Talla": "XL",
+      "Nombre Articulo": "Ralph Lauren",
+      "Comentarios": "Yellow"
+    },
+    {
+      "id": 12,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$100.09",
+      "Talla": "XXL",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Crimson"
+    },
+    {
+      "id": 13,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$120.38",
+      "Talla": "XXL",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Maroon"
+    },
+    {
+      "id": 14,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$32.28",
+      "Talla": "M",
+      "Nombre Articulo": "Ralph Lauren",
+      "Comentarios": "Maroon"
+    },
+    {
+      "id": 15,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$125.13",
+      "Talla": "XL",
+      "Nombre Articulo": "Zara",
+      "Comentarios": "Red"
+    },
+    {
+      "id": 16,
+      "Tipo Articulo": "Jean",
+      "Precio": "$89.53",
+      "Talla": "L",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Green"
+    },
+    {
+      "id": 17,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$122.63",
+      "Talla": "M",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Red"
+    },
+    {
+      "id": 18,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$69.74",
+      "Talla": "XS",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Mauv"
+    },
+    {
+      "id": 19,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$35.85",
+      "Talla": "XXL",
+      "Nombre Articulo": "Louis Vitton",
+      "Comentarios": "Green"
+    },
+    {
+      "id": 20,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$89.45",
+      "Talla": "L",
+      "Nombre Articulo": "Zara",
+      "Comentarios": "Fuscia"
+    },
+    {
+      "id": 21,
+      "Tipo Articulo": "Jean",
+      "Precio": "$120.38",
+      "Talla": "XS",
+      "Nombre Articulo": "Zara",
+      "Comentarios": "Turquoise"
+    },
+    {
+      "id": 22,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$109.86",
+      "Talla": "L",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Crimson"
+    },
+    {
+      "id": 23,
+      "Tipo Articulo": "Jean",
+      "Precio": "$22.98",
+      "Talla": "S",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Turquoise"
+    },
+    {
+      "id": 24,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$14.98",
+      "Talla": "M",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Khaki"
+    },
+    {
+      "id": 25,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$114.80",
+      "Talla": "M",
+      "Nombre Articulo": "Nike",
+      "Comentarios": "Khaki"
+    },
+    {
+      "id": 26,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$102.49",
+      "Talla": "L",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Mauv"
+    },
+    {
+      "id": 27,
+      "Tipo Articulo": "Jean",
+      "Precio": "$89.85",
+      "Talla": "XL",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Indigo"
+    },
+    {
+      "id": 28,
+      "Tipo Articulo": "Jean",
+      "Precio": "$78.37",
+      "Talla": "M",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Yellow"
+    },
+    {
+      "id": 29,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$13.22",
+      "Talla": "M",
+      "Nombre Articulo": "Louis Vitton",
+      "Comentarios": "Puce"
+    },
+    {
+      "id": 30,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$88.82",
+      "Talla": "S",
+      "Nombre Articulo": "Ralph Lauren",
+      "Comentarios": "Pink"
+    },
+    {
+      "id": 31,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$77.32",
+      "Talla": "L",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Indigo"
+    },
+    {
+      "id": 32,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$48.09",
+      "Talla": "L",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Orange"
+    },
+    {
+      "id": 33,
+      "Tipo Articulo": "Jean",
+      "Precio": "$49.71",
+      "Talla": "XS",
+      "Nombre Articulo": "Nike",
+      "Comentarios": "Turquoise"
+    },
+    {
+      "id": 34,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$49.21",
+      "Talla": "L",
+      "Nombre Articulo": "Zara",
+      "Comentarios": "Aquamarine"
+    },
+    {
+      "id": 35,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$55.98",
+      "Talla": "XL",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Mauv"
+    },
+    {
+      "id": 36,
+      "Tipo Articulo": "Jean",
+      "Precio": "$75.31",
+      "Talla": "M",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Mauv"
+    },
+    {
+      "id": 37,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$102.97",
+      "Talla": "XXL",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Aquamarine"
+    },
+    {
+      "id": 38,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$27.52",
+      "Talla": "M",
+      "Nombre Articulo": "Ralph Lauren",
+      "Comentarios": "Orange"
+    },
+    {
+      "id": 39,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$49.50",
+      "Talla": "XS",
+      "Nombre Articulo": "Louis Vitton",
+      "Comentarios": "Green"
+    },
+    {
+      "id": 40,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$72.69",
+      "Talla": "S",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Puce"
+    },
+    {
+      "id": 41,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$39.40",
+      "Talla": "XS",
+      "Nombre Articulo": "Nike",
+      "Comentarios": "Green"
+    },
+    {
+      "id": 42,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$27.74",
+      "Talla": "S",
+      "Nombre Articulo": "Louis Vitton",
+      "Comentarios": "Red"
+    },
+    {
+      "id": 43,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$101.37",
+      "Talla": "L",
+      "Nombre Articulo": "Ralph Lauren",
+      "Comentarios": "Green"
+    },
+    {
+      "id": 44,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$104.10",
+      "Talla": "S",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Maroon"
+    },
+    {
+      "id": 45,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$75.08",
+      "Talla": "S",
+      "Nombre Articulo": "Ralph Lauren",
+      "Comentarios": "Violet"
+    },
+    {
+      "id": 46,
+      "Tipo Articulo": "Jean",
+      "Precio": "$65.32",
+      "Talla": "M",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Fuscia"
+    },
+    {
+      "id": 47,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$57.23",
+      "Talla": "XL",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Teal"
+    },
+    {
+      "id": 48,
+      "Tipo Articulo": "Jean",
+      "Precio": "$23.74",
+      "Talla": "XL",
+      "Nombre Articulo": "Ralph Lauren",
+      "Comentarios": "Teal"
+    },
+    {
+      "id": 49,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$83.51",
+      "Talla": "M",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Orange"
+    },
+    {
+      "id": 50,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$48.41",
+      "Talla": "S",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Indigo"
+    },
+    {
+      "id": 51,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$14.23",
+      "Talla": "M",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Yellow"
+    },
+    {
+      "id": 52,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$99.62",
+      "Talla": "XL",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Fuscia"
+    },
+    {
+      "id": 53,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$80.36",
+      "Talla": "XL",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Goldenrod"
+    },
+    {
+      "id": 54,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$67.94",
+      "Talla": "XL",
+      "Nombre Articulo": "Nike",
+      "Comentarios": "Crimson"
+    },
+    {
+      "id": 55,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$27.37",
+      "Talla": "L",
+      "Nombre Articulo": "Nike",
+      "Comentarios": "Pink"
+    },
+    {
+      "id": 56,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$119.43",
+      "Talla": "XS",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Aquamarine"
+    },
+    {
+      "id": 57,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$119.62",
+      "Talla": "XXL",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Pink"
+    },
+    {
+      "id": 58,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$114.52",
+      "Talla": "L",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Crimson"
+    },
+    {
+      "id": 59,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$83.39",
+      "Talla": "XS",
+      "Nombre Articulo": "Louis Vitton",
+      "Comentarios": "Goldenrod"
+    },
+    {
+      "id": 60,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$24.21",
+      "Talla": "XXL",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Fuscia"
+    },
+    {
+      "id": 61,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$73.13",
+      "Talla": "XXL",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Crimson"
+    },
+    {
+      "id": 62,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$82.83",
+      "Talla": "XXL",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Purple"
+    },
+    {
+      "id": 63,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$66.19",
+      "Talla": "XXL",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Teal"
+    },
+    {
+      "id": 64,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$66.72",
+      "Talla": "XS",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Blue"
+    },
+    {
+      "id": 65,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$34.42",
+      "Talla": "L",
+      "Nombre Articulo": "Zara",
+      "Comentarios": "Fuscia"
+    },
+    {
+      "id": 66,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$91.45",
+      "Talla": "XS",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Crimson"
+    },
+    {
+      "id": 67,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$18.88",
+      "Talla": "XL",
+      "Nombre Articulo": "Nike",
+      "Comentarios": "Teal"
+    },
+    {
+      "id": 68,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$42.26",
+      "Talla": "L",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Goldenrod"
+    },
+    {
+      "id": 69,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$34.52",
+      "Talla": "XXL",
+      "Nombre Articulo": "Zara",
+      "Comentarios": "Pink"
+    },
+    {
+      "id": 70,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$32.25",
+      "Talla": "M",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Indigo"
+    },
+    {
+      "id": 71,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$82.73",
+      "Talla": "XL",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Crimson"
+    },
+    {
+      "id": 72,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$126.51",
+      "Talla": "XL",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Turquoise"
+    },
+    {
+      "id": 73,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$77.85",
+      "Talla": "XS",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Green"
+    },
+    {
+      "id": 74,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$12.98",
+      "Talla": "L",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Puce"
+    },
+    {
+      "id": 75,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$32.65",
+      "Talla": "XL",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Purple"
+    },
+    {
+      "id": 76,
+      "Tipo Articulo": "Jean",
+      "Precio": "$60.04",
+      "Talla": "S",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Yellow"
+    },
+    {
+      "id": 77,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$79.23",
+      "Talla": "XXL",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Maroon"
+    },
+    {
+      "id": 78,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$115.69",
+      "Talla": "M",
+      "Nombre Articulo": "Ralph Lauren",
+      "Comentarios": "Goldenrod"
+    },
+    {
+      "id": 79,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$21.76",
+      "Talla": "M",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Teal"
+    },
+    {
+      "id": 80,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$72.05",
+      "Talla": "L",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Yellow"
+    },
+    {
+      "id": 81,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$112.31",
+      "Talla": "XXL",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Teal"
+    },
+    {
+      "id": 82,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$115.57",
+      "Talla": "XXL",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Khaki"
+    },
+    {
+      "id": 83,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$61.70",
+      "Talla": "XS",
+      "Nombre Articulo": "Nike",
+      "Comentarios": "Puce"
+    },
+    {
+      "id": 84,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$25.63",
+      "Talla": "XL",
+      "Nombre Articulo": "Ralph Lauren",
+      "Comentarios": "Teal"
+    },
+    {
+      "id": 85,
+      "Tipo Articulo": "Jean",
+      "Precio": "$97.13",
+      "Talla": "XXL",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Teal"
+    },
+    {
+      "id": 86,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$61.64",
+      "Talla": "S",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Maroon"
+    },
+    {
+      "id": 87,
+      "Tipo Articulo": "Zapato",
+      "Precio": "$70.67",
+      "Talla": "S",
+      "Nombre Articulo": "Hush Puppies",
+      "Comentarios": "Red"
+    },
+    {
+      "id": 88,
+      "Tipo Articulo": "Jean",
+      "Precio": "$102.99",
+      "Talla": "L",
+      "Nombre Articulo": "Gucci",
+      "Comentarios": "Purple"
+    },
+    {
+      "id": 89,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$60.49",
+      "Talla": "XL",
+      "Nombre Articulo": "Zara",
+      "Comentarios": "Yellow"
+    },
+    {
+      "id": 90,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$48.68",
+      "Talla": "M",
+      "Nombre Articulo": "Zara",
+      "Comentarios": "Teal"
+    },
+    {
+      "id": 91,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$52.35",
+      "Talla": "XS",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Turquoise"
+    },
+    {
+      "id": 92,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$79.89",
+      "Talla": "S",
+      "Nombre Articulo": "Nike",
+      "Comentarios": "Teal"
+    },
+    {
+      "id": 93,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$57.46",
+      "Talla": "M",
+      "Nombre Articulo": "Nike",
+      "Comentarios": "Puce"
+    },
+    {
+      "id": 94,
+      "Tipo Articulo": "Tennis",
+      "Precio": "$22.64",
+      "Talla": "S",
+      "Nombre Articulo": "Louis Vitton",
+      "Comentarios": "Mauv"
+    },
+    {
+      "id": 95,
+      "Tipo Articulo": "Camisa",
+      "Precio": "$48.32",
+      "Talla": "XS",
+      "Nombre Articulo": "Zara",
+      "Comentarios": "Khaki"
+    },
+    {
+      "id": 96,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$55.54",
+      "Talla": "S",
+      "Nombre Articulo": "Nike",
+      "Comentarios": "Green"
+    },
+    {
+      "id": 97,
+      "Tipo Articulo": "Camiseta",
+      "Precio": "$63.65",
+      "Talla": "S",
+      "Nombre Articulo": "Armani",
+      "Comentarios": "Turquoise"
+    },
+    {
+      "id": 98,
+      "Tipo Articulo": "Blusa",
+      "Precio": "$42.50",
+      "Talla": "XS",
+      "Nombre Articulo": "Adidas",
+      "Comentarios": "Pink"
+    },
+    {
+      "id": 99,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$98.04",
+      "Talla": "XL",
+      "Nombre Articulo": "Zara",
+      "Comentarios": "Crimson"
+    },
+    {
+      "id": 100,
+      "Tipo Articulo": "Pantalon",
+      "Precio": "$69.50",
+      "Talla": "XL",
+      "Nombre Articulo": "Louis Vitton",
+      "Comentarios": "Yellow"
     }
   ],
   "orden": [
     {
       "id": 1,
       "Nombre Cliente": "Juan Perez",
-      "Numero Telefono": "9858-1245",
+      "Numero Telefono": "504-9601-0802",
       "Direccion": "Barrio Guamilito 13 calle 4 ave",
       "Fecha Vendida": "15/06/2019",
       "Fecha Entrega": "17/06/2019",
