@@ -16,12 +16,18 @@ import ListIcon from '@material-ui/icons/List';
 import Dashboard from './Components/dashboard';
 import AuthProvider from './Components/authProvider';
 //import DataProvider from './Components/dataprovider';
+//Language
+import spanishMessages from '@blackbox-vision/ra-language-spanish';
+import polyglotI18nProvider from 'ra-i18n-polyglot';
+
+const i18nProvider = polyglotI18nProvider(() => spanishMessages, 'es');
 
 const dataProvider = jsonServerProvider(
   'http://my-json-server.typicode.com/francomidence/admin'
 );
 const App = () => (
   <Admin
+    i18nProvider={i18nProvider}
     authProvider={AuthProvider}
     dashboard={Dashboard}
     dataProvider={dataProvider}
@@ -42,7 +48,7 @@ const App = () => (
     ></Resource>
     <Resource name="usuario" list={ListGuesser} icon={UserIcon}></Resource>
     <Resource name="articulo" list={ListGuesser} icon={ListIcon}></Resource>
-    <Resource name="tipo articulo" list={ListGuesser}></Resource>
+    <Resource name="tipoArticulo" list={ListGuesser}></Resource>
     <Resource name="tienda" list={ListGuesser}></Resource>
     <Resource
       name="orden"

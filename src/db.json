@@ -32,7 +32,7 @@
   "articulo": [
     {
       "id": 1,
-      "Tipo Articulo": "Camiseta",
+      "idTipoArticulo": 1,
       "Precio": "$23.63",
       "Talla": "XXL",
       "Nombre Articulo": "Ralph Lauren",
@@ -40,7 +40,7 @@
     },
     {
       "id": 2,
-      "Tipo Articulo": "Tennis",
+      "idTipoArticulo": 2,
       "Precio": "$87.69",
       "Talla": "L",
       "Nombre Articulo": "Nike",
@@ -48,7 +48,7 @@
     },
     {
       "id": 3,
-      "Tipo Articulo": "Tennis",
+      "idTipoArticulo": 3,
       "Precio": "$32.97",
       "Talla": "L",
       "Nombre Articulo": "Ralph Lauren",
@@ -56,7 +56,7 @@
     },
     {
       "id": 4,
-      "Tipo Articulo": "Pantalon",
+      "idTipoArticulo": 3,
       "Precio": "$57.78",
       "Talla": "XXL",
       "Nombre Articulo": "Nike",
@@ -64,7 +64,7 @@
     },
     {
       "id": 5,
-      "Tipo Articulo": "Jean",
+      "idTipoArticulo": 2,
       "Precio": "$73.05",
       "Talla": "M",
       "Nombre Articulo": "Nike",
@@ -72,7 +72,7 @@
     },
     {
       "id": 6,
-      "Tipo Articulo": "Jean",
+      "idTipoArticulo": 1,
       "Precio": "$71.55",
       "Talla": "L",
       "Nombre Articulo": "Hush Puppies",
@@ -80,7 +80,7 @@
     },
     {
       "id": 7,
-      "Tipo Articulo": "Zapato",
+      "idTipoArticulo": 2,
       "Precio": "$70.44",
       "Talla": "S",
       "Nombre Articulo": "Armani",
@@ -88,7 +88,7 @@
     },
     {
       "id": 8,
-      "Tipo Articulo": "Tennis",
+      "idTipoArticulo": 1,
       "Precio": "$81.75",
       "Talla": "XS",
       "Nombre Articulo": "Armani",
@@ -96,7 +96,7 @@
     },
     {
       "id": 9,
-      "Tipo Articulo": "Blusa",
+      "idTipoArticulo": 1,
       "Precio": "$13.72",
       "Talla": "XS",
       "Nombre Articulo": "Zara",
@@ -104,7 +104,7 @@
     },
     {
       "id": 10,
-      "Tipo Articulo": "Zapato",
+      "idTipoArticulo": 2,
       "Precio": "$97.42",
       "Talla": "M",
       "Nombre Articulo": "Louis Vitton",

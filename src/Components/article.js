@@ -16,6 +16,7 @@ import {
   SimpleList,
   RadioButtonGroupInput
 } from 'react-admin';
+import tipoArticuloImport from '../db.json';
 
 const ArticleTitle = ({ record }) => {
   return <span>Article {record ? `"${record.title}}"` : ''}</span>;
@@ -23,15 +24,15 @@ const ArticleTitle = ({ record }) => {
 
 const ArticleFilter = props => (
   <Filter {...props}>
-    <TextInput label="Search" source="q" alwaysOn />
-    <ReferenceInput
+    <TextInput label="Buscar" source="q" alwaysOn />
+    {/* <ReferenceInput
       label="articulo"
       source="id"
-      reference="tipo articulo"
+      reference="tipoArticulo"
       allowEmpty
     >
-      <SelectInput optionText="Nombre Articulo" />
-    </ReferenceInput>
+      <SelectInput optionText="tipo" />
+    </ReferenceInput> */}
   </Filter>
 );
 
@@ -50,7 +51,13 @@ export const ArticleList = props => {
       ) : (
         <Datagrid>
           <TextField source="id" />
-          <TextField source="Tipo Articulo" />
+          <ReferenceField
+            label="Tipo Articulo"
+            source="idTipoArticulo"
+            reference="tipoArticulo"
+          >
+            <TextField source="tipo" />
+          </ReferenceField>
           <TextField source="Precio" />
           <TextField source="Talla" />
           <TextField source="Nombre Articulo" />
@@ -62,18 +69,25 @@ export const ArticleList = props => {
   );
 };
 
+const choices = [
+  { _id: 1, tipo: 'Camisa' },
+  { _id: 2, tipo: 'Jean' },
+  { _id: 3, tipo: 'Zapato' }
+];
+
 export const ArticleEdit = props => (
   <Edit title={<ArticleTitle />} {...props}>
     <SimpleForm>
       <TextInput disabled source="id" />
-      <RadioButtonGroupInput
-        source="tipo articulo"
-        choices={[
-          { id: 'programming', name: 'Programming' },
-          { id: 'lifestyle', name: 'Lifestyle' },
-          { id: 'photography', name: 'Photography' }
-        ]}
-      />
+      {/* <SelectInput
+        source="tipoArticulo"
+        choices={choices}
+        optionText="tipo"
+        optionValue="id"
+      /> */}
+      <ReferenceInput source="idTipoArticulo" reference="tipoArticulo">
+        <SelectInput optionText="tipo" />
+      </ReferenceInput>
       <TextInput source="Precio" />
       <TextInput source="Talla" />
       <TextInput source="Nombre Articulo" />
@@ -86,7 +100,7 @@ export const ArticleCreate = props => (
   <Create {...props}>
     <SimpleForm>
       <ReferenceInput source="id" reference="tipo articulo">
-        <SelectInput optionText="Tipo Articulo"></SelectInput>
+        <SelectInput optionText="tipoArticulo"></SelectInput>
       </ReferenceInput>
       <TextInput source="Precio"></TextInput>
       <TextInput source="Talla"></TextInput>
