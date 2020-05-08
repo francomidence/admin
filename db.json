@@ -1,0 +1,92 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "Nombre": "admin",
+      "Tienda Perteneciente": "City mall",
+      "Telefono": "9825-5623",
+      "Tipo Usuario": "administrador"
+    },
+    {
+      "id": 2,
+      "Nombre": "usuario",
+      "Tienda Perteneciente": "Mall galerias del valle",
+      "Telefono": "8956-2312",
+      "Tipo Usuario": "usuario"
+    },
+    {
+      "id": 3,
+      "Nombre": "motorista",
+      "Tienda Perteneciente": "Ninguna",
+      "Telefono": "9985-2648",
+      "Tipo Usuario": "motorista"
+    }
+  ],
+  "articulo": [
+    {
+      "id": 1,
+      "Tipo Articulo": "Jean",
+      "Precio": 250.99,
+      "Talla": "M",
+      "Nombre Articulo": "Pepe Jean Azul Marino",
+      "Comentarios": "Jean azul marino con bordes cafe oscuro"
+    },
+    {
+      "id": 2,
+      "Tipo Articulo": "Camisa",
+      "Precio": 300.99,
+      "Talla": "L",
+      "Nombre Articulo": "Polo Ralph Lauren Negra",
+      "Comentarios": "Camiseta polo negra con mangas rojas"
+    },
+    {
+      "id": 3,
+      "Tipo Articulo": "Zapato",
+      "Precio": 350.99,
+      "Talla": "10",
+      "Nombre Articulo": "Hush Puppies Cafe",
+      "Comentarios": "Zapatos marca Hush Puppies Cafe claro con cordones cafe oscuro"
+    }
+  ],
+  "motorista": [
+    {
+      "id": 1,
+      "Nombre": "Jose Perez",
+      "Telefono": "9856-2345"
+    },
+    {
+      "id": 2,
+      "Nombre": "Juan Mendez",
+      "Telefono": "8945-1547"
+    },
+    {
+      "id": 3,
+      "Nombre": "Pedro Fernandez",
+      "Telefono": "9963-5825"
+    }
+  ],
+  "orden": [
+    {
+      "id": 1,
+      "Nombre Cliente": "Juan Perez",
+      "Numero Telefono": "9858-1245",
+      "Direccion": "Barrio Guamilito 13 calle 4 ave",
+      "Fecha Vendida": "15/06/2019",
+      "Fecha Entrega": "17/06/2019",
+      "Articulos": [
+        {
+          "Precio": 250.99,
+          "Talla": "M",
+          "Nombre Articulo": "Pepe Jean Azul Marino"
+        },
+        {
+          "Precio": 350.99,
+          "Talla": "10",
+          "Nombre Articulo": "Zapatos Hush Puppies"
+        }
+      ],
+      "Gran Total": 601.98,
+      "Estatus Entrega": "Pendiente"
+    }
+  ]
+}
