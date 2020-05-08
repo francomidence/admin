@@ -1,0 +1,79 @@
+Total Productos entregados
+Total de Productos que han salido de la tienda
+salido del inventario de tienda es decir
+Producto 
+De que tienda salen los Productos
+todo el producto sale de la misma tienda
+
+Franco compro 4 jeans 5 blusas etc
+No Telefono
+Colonia de Destino
+Fecha de Entrega 
+
+La ropa viene de tal tienda
+
+48 prendas
+
+Seleccionar por categoria
+Camisa, zapatos etc
+
+Mall multiplaza
+
+En search por tienda y numero de venta
+
+///////////////////////////////////////////////////
+Dasboard Solo Administradores pueden verlo
+Gente pueda ver ventas que se han hecho
+Total Monetario de las ventas de todas las tiendas
+Ventas por local y se sepa que salio de cada local
+Que se sepa que fue lo que se vendio
+Total prendas de cada tienda
+Total Monetario por tienda
+De donde salio el articulo
+///////////////////////////////////////////////////
+Admin todo
+El de ventas agregar ventas y a quien se le asigno las entregas
+Motorista solo puede ver las entregas, lo que va a entregar y cambiar el estado
+
+///////////////////////////////////////////////////
+Usuarios
+Id
+Nombre
+Tienda a la que pertenece
+Telefono
+Tipo de Usuario
+///////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+Ordenes
+Id
+//Numero de Venta
+Nombre del Cliente
+Numero de Telefono del Cliente
+Direccion del cliente
+Fecha en la que se vendio
+Fecha de entrega
+Articulo
+Gran Total
+Status de la entrega
+El que entrega solo tiene acceso a las entregas que le corresponden
+Entregado Pendiente Pospuesto o Cancelado
+Motorista se asigna cuando el administrador defina a quien le conviene
+///////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+Articulos
+Id
+Tipo de articulo
+Precio
+Talla
+Nombre del articulo
+Comentarios
+///////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+Motoristas
+Id
+Nombre
+Telefono
+///////////////////////////////////////////////////
