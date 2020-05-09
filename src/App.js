@@ -1,18 +1,25 @@
 import React from 'react';
+//Components
 //import { Admin, Resource, ListGuesser } from 'react-admin';
 import { Admin, Resource, ListGuesser } from 'react-admin';
-import { UserList } from './Components/users';
+//import { UserList } from './Components/users';
 import { PostList, PostEdit, PostCreate } from './Components/posts';
 import { ArticleCreate, ArticleEdit, ArticleList } from './Components/article';
+import {
+  ArticleTypeCreate,
+  ArticleTypeEdit,
+  ArticleTypeList
+} from './Components/articleType';
+import { ShopCreate, ShopEdit, ShopList } from './Components/shop';
+
 import jsonServerProvider from 'ra-data-json-server';
 import './App.css';
 //Icons
 import PostIcon from '@material-ui/icons/Book';
 import UserIcon from '@material-ui/icons/Group';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import MotorcycleIcon from '@material-ui/icons/Motorcycle';
 import ListIcon from '@material-ui/icons/List';
-//Components
+//Utilities
 import Dashboard from './Components/dashboard';
 import AuthProvider from './Components/authProvider';
 //import DataProvider from './Components/dataprovider';
@@ -32,13 +39,13 @@ const App = () => (
     dashboard={Dashboard}
     dataProvider={dataProvider}
   >
-    <Resource
+    {/* <Resource
       name="posts"
       list={PostList}
       edit={PostEdit}
       create={PostCreate}
       icon={PostIcon}
-    ></Resource>
+    ></Resource> */}
     <Resource
       name="articulo"
       list={ArticleList}
@@ -48,8 +55,18 @@ const App = () => (
     ></Resource>
     <Resource name="usuario" list={ListGuesser} icon={UserIcon}></Resource>
     <Resource name="articulo" list={ListGuesser} icon={ListIcon}></Resource>
-    <Resource name="tipoArticulo" list={ListGuesser}></Resource>
-    <Resource name="tienda" list={ListGuesser}></Resource>
+    <Resource
+      name="tipoArticulo"
+      list={ArticleTypeList}
+      edit={ArticleTypeEdit}
+      create={ArticleTypeCreate}
+    ></Resource>
+    <Resource
+      name="tienda"
+      list={ShopList}
+      edit={ShopEdit}
+      create={ShopCreate}
+    ></Resource>
     <Resource
       name="orden"
       list={ListGuesser}

@@ -13,10 +13,8 @@ import {
   TextInput,
   Create,
   Filter,
-  SimpleList,
-  RadioButtonGroupInput
+  SimpleList
 } from 'react-admin';
-import tipoArticuloImport from '../db.json';
 
 const ArticleTitle = ({ record }) => {
   return <span>Article {record ? `"${record.title}}"` : ''}</span>;
@@ -25,14 +23,14 @@ const ArticleTitle = ({ record }) => {
 const ArticleFilter = props => (
   <Filter {...props}>
     <TextInput label="Buscar" source="q" alwaysOn />
-    {/* <ReferenceInput
-      label="articulo"
-      source="id"
+    <ReferenceInput
+      label="Articulo"
+      source="idTipoArticulo"
       reference="tipoArticulo"
       allowEmpty
     >
       <SelectInput optionText="tipo" />
-    </ReferenceInput> */}
+    </ReferenceInput>
   </Filter>
 );
 
@@ -69,22 +67,10 @@ export const ArticleList = props => {
   );
 };
 
-const choices = [
-  { _id: 1, tipo: 'Camisa' },
-  { _id: 2, tipo: 'Jean' },
-  { _id: 3, tipo: 'Zapato' }
-];
-
 export const ArticleEdit = props => (
   <Edit title={<ArticleTitle />} {...props}>
     <SimpleForm>
       <TextInput disabled source="id" />
-      {/* <SelectInput
-        source="tipoArticulo"
-        choices={choices}
-        optionText="tipo"
-        optionValue="id"
-      /> */}
       <ReferenceInput source="idTipoArticulo" reference="tipoArticulo">
         <SelectInput optionText="tipo" />
       </ReferenceInput>
@@ -99,8 +85,8 @@ export const ArticleEdit = props => (
 export const ArticleCreate = props => (
   <Create {...props}>
     <SimpleForm>
-      <ReferenceInput source="id" reference="tipo articulo">
-        <SelectInput optionText="tipoArticulo"></SelectInput>
+      <ReferenceInput source="idTipoArticulo" reference="tipoArticulo">
+        <SelectInput optionText="tipo" />
       </ReferenceInput>
       <TextInput source="Precio"></TextInput>
       <TextInput source="Talla"></TextInput>
