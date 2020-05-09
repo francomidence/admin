@@ -5,7 +5,7 @@
       "Nombre Usuario": "Robyn",
       "Tienda Perteneciente": "Centro Comercial City Mall",
       "Telefono": "481-960-0802",
-      "Tipo Usuario": "Usuario"`
+      "Tipo Usuario": "Usuario"
     },
     {
       "id": 2,
@@ -168,18 +168,18 @@
       "tipo": "zapato"
     }
   ],
-  "motorista":[
+  "motorista": [
     {
-      "id":1,
-      "nombre":"Juan Perez"
+      "id": 1,
+      "nombre": "Juan Perez"
     },
     {
-      "id":2,
-      "nombre":"Pedro Fernandez"
+      "id": 2,
+      "nombre": "Pedro Fernandez"
     },
     {
-      "id":3,
-      "nombre":"Jose Paz"
-    }    
+      "id": 3,
+      "nombre": "Jose Paz"
+    }
   ]
 }
