@@ -100,8 +100,8 @@ export const OrderEdit = props => (
       <DateInput source="Fecha Entrega" />
       <ArrayInput source="Articulos">
         <SimpleFormIterator>
-          <TextInput source="Nombre Articulo" />
-          <TextInput source="Precio" />
+          <TextInput label="Nombre del Articulo" source="Nombre Articulo" />
+          <TextInput label="Precio" source="Precio" />
         </SimpleFormIterator>
       </ArrayInput>
       <NumberInput source="Gran Total" />
@@ -123,8 +123,8 @@ export const OrderCreate = props => (
       <DateInput source="Fecha Entrega" />
       <ArrayInput source="Articulos">
         <SimpleFormIterator>
-          <TextInput source="Nombre Articulo" />
-          <TextInput source="Precio" />
+          <TextInput label="Nombre del Articulo" source="Nombre Articulo" />
+          <TextInput label="Precio" source="Precio" />
         </SimpleFormIterator>
       </ArrayInput>
       <NumberInput source="Gran Total" />
