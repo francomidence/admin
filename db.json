@@ -16,15 +16,8 @@
     },
     {
       "id": 3,
-      "Nombre Usuario": "Lauri",
-      "Tienda Perteneciente": "Mall Cascadas",
-      "Telefono": "256-184-3829",
-      "Tipo Usuario": "Administrador"
-    },
-    {
-      "id": 4,
       "Nombre Usuario": "Theodoric",
-      "Tienda Perteneciente": "Centro Comercial City Mall",
+      "Tienda Perteneciente": "Mall Cascadas",
       "Telefono": "129-252-4825",
       "Tipo Usuario": "Motorista"
     }
@@ -69,46 +62,6 @@
       "Talla": "M",
       "Nombre Articulo": "Nike",
       "Comentarios": "Pink"
-    },
-    {
-      "id": 6,
-      "idTipoArticulo": 1,
-      "Precio": "$71.55",
-      "Talla": "L",
-      "Nombre Articulo": "Hush Puppies",
-      "Comentarios": "Pink"
-    },
-    {
-      "id": 7,
-      "idTipoArticulo": 2,
-      "Precio": "$70.44",
-      "Talla": "S",
-      "Nombre Articulo": "Armani",
-      "Comentarios": "Khaki"
-    },
-    {
-      "id": 8,
-      "idTipoArticulo": 1,
-      "Precio": "$81.75",
-      "Talla": "XS",
-      "Nombre Articulo": "Armani",
-      "Comentarios": "Pink"
-    },
-    {
-      "id": 9,
-      "idTipoArticulo": 1,
-      "Precio": "$13.72",
-      "Talla": "XS",
-      "Nombre Articulo": "Zara",
-      "Comentarios": "Violet"
-    },
-    {
-      "id": 10,
-      "idTipoArticulo": 2,
-      "Precio": "$97.42",
-      "Talla": "M",
-      "Nombre Articulo": "Louis Vitton",
-      "Comentarios": "Aquamarine"
     }
   ],
   "orden": [
