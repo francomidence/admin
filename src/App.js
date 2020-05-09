@@ -12,6 +12,7 @@ import {
 } from './Components/articleType';
 import { ShopCreate, ShopEdit, ShopList } from './Components/shop';
 import { OrderCreate, OrderEdit, OrderList } from './Components/order';
+import { DriverCreate, DriverEdit, DriverList } from './Components/driver';
 
 import jsonServerProvider from 'ra-data-json-server';
 import './App.css';
@@ -22,6 +23,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ListIcon from '@material-ui/icons/List';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import StorefrontIcon from '@material-ui/icons/Storefront';
+import MotorcycleIcon from '@material-ui/icons/Motorcycle';
 //Utilities
 import Dashboard from './Components/dashboard';
 import AuthProvider from './Components/authProvider';
@@ -80,6 +82,13 @@ const App = () => (
       icon={StorefrontIcon}
     ></Resource>
     <Resource name="usuario" list={ListGuesser} icon={UserIcon}></Resource>
+    <Resource
+      name="motorista"
+      list={DriverList}
+      edit={DriverEdit}
+      create={DriverCreate}
+      icon={MotorcycleIcon}
+    ></Resource>
   </Admin>
 );
 
