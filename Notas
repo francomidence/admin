@@ -77,3 +77,32 @@ Id
 Nombre
 Telefono
 ///////////////////////////////////////////////////
+
+Nombre persona
+Nombre comprador
+Articulo
+Cantidad Articulos
+Precio x Articulo
+El jean cuesta 300 lps
+si agarro 2 jeans entonces seria
+2 * 300
+
+Responsable de articulo
+Saber de que tienda viene
+
+Quien modifica
+auditoria
+
+Vendedor en vez de usuario
+Usuario perteneciente a tienda
+Admin en tiendas por si no
+pertenecen
+Orden de Menu
+Tablero
+Ordenes
+Articulos
+Tipo de Articulos
+Tiendas
+Usuarios
+
+Que el administrador asigne motorista a las ordenes

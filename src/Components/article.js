@@ -17,7 +17,8 @@ import {
 } from 'react-admin';
 
 const ArticleTitle = ({ record }) => {
-  return <span>Article {record ? `"${record.title}}"` : ''}</span>;
+  //return <span>Article {record ? `"${record.title}}"` : ''}</span>;
+  return <span>Articulo</span>;
 };
 
 const ArticleFilter = props => (
@@ -37,15 +38,30 @@ const ArticleFilter = props => (
 export const ArticleList = props => {
   const isSmall = useMediaQuery(theme => theme.breakpoints.down('sm'));
   return (
-    <List filters={<ArticleFilter />} {...props}>
+    <List title={<ArticleTitle />} filters={<ArticleFilter />} {...props}>
       {isSmall ? (
-        <SimpleList
-          primaryText={record => record.title}
-          secondaryText={record => `${record.views} views`}
-          tertiaryText={record =>
-            new Date(record.published_at).toLocaleDateString()
-          }
-        />
+        // <SimpleList
+        //   primaryText={record => record.title}
+        //   secondaryText={record => `${record.views} views`}
+        //   tertiaryText={record =>
+        //     new Date(record.published_at).toLocaleDateString()
+        //   }
+        // />
+        <Datagrid>
+          <TextField source="id" />
+          <ReferenceField
+            label="Tipo Articulo"
+            source="idTipoArticulo"
+            reference="tipoArticulo"
+          >
+            <TextField source="tipo" />
+          </ReferenceField>
+          <TextField source="Precio" />
+          <TextField source="Talla" />
+          <TextField source="Nombre Articulo" />
+          <TextField source="Comentarios" />
+          <EditButton />
+        </Datagrid>
       ) : (
         <Datagrid>
           <TextField source="id" />
@@ -83,7 +99,7 @@ export const ArticleEdit = props => (
 );
 
 export const ArticleCreate = props => (
-  <Create {...props}>
+  <Create title={<ArticleTitle />} {...props}>
     <SimpleForm>
       <ReferenceInput source="idTipoArticulo" reference="tipoArticulo">
         <SelectInput optionText="tipo" />

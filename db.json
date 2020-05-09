@@ -3,28 +3,28 @@
     {
       "id": 1,
       "Nombre Usuario": "Robyn",
-      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Tienda Perteneciente": "Centro Comercial City Mall",
       "Telefono": "481-960-0802",
       "Tipo Usuario": "Usuario"
     },
     {
       "id": 2,
       "Nombre Usuario": "Cynthia",
-      "Tienda Perteneciente": "Mall Multiplaza",
+      "Tienda Perteneciente": "Centro Comercial City Mall",
       "Telefono": "861-457-6787",
       "Tipo Usuario": "Administrador"
     },
     {
       "id": 3,
       "Nombre Usuario": "Lauri",
-      "Tienda Perteneciente": "Mall Multiplaza",
+      "Tienda Perteneciente": "Mall Cascadas",
       "Telefono": "256-184-3829",
       "Tipo Usuario": "Administrador"
     },
     {
       "id": 4,
       "Nombre Usuario": "Theodoric",
-      "Tienda Perteneciente": "Mall Galerias del Valle",
+      "Tienda Perteneciente": "Centro Comercial City Mall",
       "Telefono": "129-252-4825",
       "Tipo Usuario": "Motorista"
     }
@@ -116,7 +116,7 @@
       "id": 1,
       "Nombre Cliente": "Juan Perez",
       "Numero Telefono": "504-9601-0802",
-      "Direccion": "Barrio Guamilito 13 calle 4 ave",
+      "Direccion": "Colonia Las Brisas 13 calle 4 ave",
       "Fecha Vendida": "15/06/2019",
       "Fecha Entrega": "17/06/2019",
       "Articulos": [
@@ -132,21 +132,26 @@
         }
       ],
       "Gran Total": 601.98,
-      "Estatus Entrega": "Pendiente"
+      "Estatus Entrega": "Pendiente",
+      "Motorista": "Jose Perez"
     }
   ],
   "tienda": [
     {
       "id": 1,
-      "ubicacion": "City Mall"
+      "ubicacion": "Remoto"
     },
     {
       "id": 2,
-      "ubicacion": "Mall multiplaza"
+      "ubicacion": "Centro Comercial City Mall"
     },
     {
       "id": 3,
-      "ubicacion": "Mall Galerias del Valle"
+      "ubicacion": "Mall Cascadas"
+    },
+    {
+      "id": 4,
+      "ubicacion": "MetroMall"
     }
   ],
   "tipoArticulo": [

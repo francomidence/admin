@@ -14,7 +14,10 @@ import {
 } from 'react-admin';
 
 const ArticleTypeTitle = ({ record }) => {
-  return <span>ArticleType {record ? `"${record.title}}"` : ''}</span>;
+  return (
+    <span>Tipo de articulo </span>
+    //<span>Tipo de articulo {record ? `"${record.title}}"` : ''}</span>
+  );
 };
 
 const ArticleTypeFilter = props => (
@@ -26,15 +29,24 @@ const ArticleTypeFilter = props => (
 export const ArticleTypeList = props => {
   const isSmall = useMediaQuery(theme => theme.breakpoints.down('sm'));
   return (
-    <List filters={<ArticleTypeFilter />} {...props}>
+    <List
+      title={<ArticleTypeTitle />}
+      filters={<ArticleTypeFilter />}
+      {...props}
+    >
       {isSmall ? (
-        <SimpleList
-          primaryText={record => record.title}
-          secondaryText={record => `${record.views} views`}
-          tertiaryText={record =>
-            new Date(record.published_at).toLocaleDateString()
-          }
-        />
+        // <SimpleList
+        //   primaryText={record => record.title}
+        //   secondaryText={record => `${record.views} views`}
+        //   tertiaryText={record =>
+        //     new Date(record.published_at).toLocaleDateString()
+        //   }
+        // />
+        <Datagrid>
+          <TextField source="id" />
+          <TextField source="tipo" />
+          <EditButton />
+        </Datagrid>
       ) : (
         <Datagrid>
           <TextField source="id" />
@@ -56,7 +68,7 @@ export const ArticleTypeEdit = props => (
 );
 
 export const ArticleTypeCreate = props => (
-  <Create {...props}>
+  <Create title={<ArticleTypeTitle />} {...props}>
     <SimpleForm>
       <TextInput source="tipo"></TextInput>
     </SimpleForm>

@@ -14,7 +14,8 @@ import {
 } from 'react-admin';
 
 const ShopTitle = ({ record }) => {
-  return <span>Shop {record ? `"${record.title}}"` : ''}</span>;
+  //return <span>Shop {record ? `"${record.title}}"` : ''}</span>;
+  return <span>Tienda </span>;
 };
 
 const ShopFilter = props => (
@@ -26,15 +27,20 @@ const ShopFilter = props => (
 export const ShopList = props => {
   const isSmall = useMediaQuery(theme => theme.breakpoints.down('sm'));
   return (
-    <List filters={<ShopFilter />} {...props}>
+    <List title={<ShopTitle />} filters={<ShopFilter />} {...props}>
       {isSmall ? (
-        <SimpleList
-          primaryText={record => record.title}
-          secondaryText={record => `${record.views} views`}
-          tertiaryText={record =>
-            new Date(record.published_at).toLocaleDateString()
-          }
-        />
+        // <SimpleList
+        //   primaryText={record => record.title}
+        //   secondaryText={record => `${record.views} views`}
+        //   tertiaryText={record =>
+        //     new Date(record.published_at).toLocaleDateString()
+        //   }
+        // />
+        <Datagrid>
+          <TextField source="id" />
+          <TextField source="ubicacion" />
+          <EditButton />
+        </Datagrid>
       ) : (
         <Datagrid>
           <TextField source="id" />
@@ -47,7 +53,7 @@ export const ShopList = props => {
 };
 
 export const ShopEdit = props => (
-  <Edit title={<ShopTitle />} {...props}>
+  <Edit title={<ShopTitle />} title={<ShopTitle />} {...props}>
     <SimpleForm>
       <TextInput disabled source="id" />
       <TextInput source="ubicacion" />
@@ -56,7 +62,7 @@ export const ShopEdit = props => (
 );
 
 export const ShopCreate = props => (
-  <Create {...props}>
+  <Create title={<ShopTitle />} {...props}>
     <SimpleForm>
       <TextInput source="ubicacion"></TextInput>
     </SimpleForm>
