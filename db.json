@@ -46,22 +46,6 @@
       "Talla": "L",
       "Nombre Articulo": "Ralph Lauren",
       "Comentarios": "Fuscia"
-    },
-    {
-      "id": 4,
-      "idTipoArticulo": 3,
-      "Precio": "$57.78",
-      "Talla": "XXL",
-      "Nombre Articulo": "Nike",
-      "Comentarios": "Turquoise"
-    },
-    {
-      "id": 5,
-      "idTipoArticulo": 2,
-      "Precio": "$73.05",
-      "Talla": "M",
-      "Nombre Articulo": "Nike",
-      "Comentarios": "Pink"
     }
   ],
   "orden": [
@@ -119,20 +103,6 @@
     {
       "id": 3,
       "tipo": "zapato"
-    }
-  ],
-  "motorista": [
-    {
-      "id": 1,
-      "nombre": "Juan Perez"
-    },
-    {
-      "id": 2,
-      "nombre": "Pedro Fernandez"
-    },
-    {
-      "id": 3,
-      "nombre": "Jose Paz"
     }
   ]
 }
