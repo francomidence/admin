@@ -57,7 +57,6 @@ export const ArticleList = props => {
             <TextField source="tipo" />
           </ReferenceField>
           <TextField source="Precio" />
-          <TextField source="Talla" />
           <TextField source="Nombre Articulo" />
           <TextField source="Comentarios" />
           <EditButton />
@@ -73,7 +72,6 @@ export const ArticleList = props => {
             <TextField source="tipo" />
           </ReferenceField>
           <TextField source="Precio" />
-          <TextField source="Talla" />
           <TextField source="Nombre Articulo" />
           <TextField source="Comentarios" />
           <EditButton />
@@ -91,7 +89,6 @@ export const ArticleEdit = props => (
         <SelectInput optionText="tipo" />
       </ReferenceInput>
       <TextInput source="Precio" />
-      <TextInput source="Talla" />
       <TextInput source="Nombre Articulo" />
       <TextInput multiline source="Comentarios"></TextInput>
     </SimpleForm>
@@ -105,7 +102,6 @@ export const ArticleCreate = props => (
         <SelectInput optionText="tipo" />
       </ReferenceInput>
       <TextInput source="Precio"></TextInput>
-      <TextInput source="Talla"></TextInput>
       <TextInput source="Nombre Articulo"></TextInput>
       <TextInput multiline source="Comentarios"></TextInput>
     </SimpleForm>
