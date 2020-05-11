@@ -1,7 +1,7 @@
 import { fetchUtils } from 'react-admin';
 import { stringify } from 'query-string';
 
-const apiUrl = 'https://my.api.com/';
+const apiUrl = 'http://localhost:5000/api';
 const httpClient = fetchUtils.fetchJson;
 
 export default {
@@ -14,23 +14,38 @@ export default {
       filter: JSON.stringify(params.filter)
     };
     const url = `${apiUrl}/${resource}?${stringify(query)}`;
+    console.log('Hola de GET LIST');
 
-    return httpClient(url).then(({ headers, json }) => ({
-      data: json,
-      total: parseInt(
-        headers
-          .get('content-range')
-          .split('/')
-          .pop(),
-        10
-      )
-    }));
+    console.log(url);
+
+    return httpClient(url).then(({ headers, json }) => {
+      // console.log(headers);
+      // console.log(JSON.stringify(json));
+
+      return {
+        data: json,
+        total: json.length
+        // total: parseInt(
+        //   headers
+        //     .get('content-range')
+        //     .split('/')
+        //     .pop(),
+        //   10
+        // )
+      };
+    });
   },
 
-  getOne: (resource, params) =>
-    httpClient(`${apiUrl}/${resource}/${params.id}`).then(({ json }) => ({
-      data: json
-    })),
+  getOne: (resource, params) => {
+    console.log('Hola de GET ONE');
+    console.log(params);
+
+    return httpClient(`${apiUrl}/${resource}/${params.id}`).then(
+      ({ json }) => ({
+        data: json
+      })
+    );
+  },
 
   getMany: (resource, params) => {
     const query = {
@@ -65,11 +80,14 @@ export default {
     }));
   },
 
-  update: (resource, params) =>
-    httpClient(`${apiUrl}/${resource}/${params.id}`, {
+  update: (resource, params) => {
+    console.log('Hola de UPDATE');
+    console.log(params);
+    return httpClient(`${apiUrl}/${resource}/${params.id}`, {
       method: 'PUT',
       body: JSON.stringify(params.data)
-    }).then(({ json }) => ({ data: json })),
+    }).then(({ json }) => ({ data: json }));
+  },
 
   updateMany: (resource, params) => {
     const query = {
@@ -89,18 +107,27 @@ export default {
       data: { ...params.data, id: json.id }
     })),
 
-  delete: (resource, params) =>
-    httpClient(`${apiUrl}/${resource}/${params.id}`, {
+  delete: (resource, params) => {
+    console.log('Hello from DELETE one');
+
+    return httpClient(`${apiUrl}/${resource}/${params.id}`, {
       method: 'DELETE'
-    }).then(({ json }) => ({ data: json })),
+    }).then(({ json }) => ({ data: json }));
+  },
 
   deleteMany: (resource, params) => {
+    console.log('Hello from DELETE MANY');
+    let ids = params.ids.join(',');
     const query = {
       filter: JSON.stringify({ id: params.ids })
     };
-    return httpClient(`${apiUrl}/${resource}?${stringify(query)}`, {
-      method: 'DELETE',
-      body: JSON.stringify(params.data)
+    // console.log(JSON.stringify(query));
+    console.log('soy del delete many data provider');
+
+    return httpClient(`${apiUrl}/${resource}/${ids}`, {
+      method: 'DELETE'
+      // method: 'DELETE',
+      // body: JSON.stringify(params.data)
     }).then(({ json }) => ({ data: json }));
   }
 };

@@ -12,26 +12,25 @@ import {
   SelectInput,
   TextInput,
   Create,
-  Filter,
-  SimpleList
+  Filter
 } from 'react-admin';
 
 const ArticleTitle = ({ record }) => {
   //return <span>Article {record ? `"${record.title}}"` : ''}</span>;
-  return <span>Articulo</span>;
+  return <span>Articulos</span>;
 };
 
 const ArticleFilter = props => (
   <Filter {...props}>
     <TextInput label="Buscar" source="q" alwaysOn />
-    <ReferenceInput
+    {/* <ReferenceInput
       label="Articulo"
-      source="idTipoArticulo"
-      reference="tipoArticulo"
+      source="articleType"
+      reference="articleType"
       allowEmpty
     >
-      <SelectInput optionText="tipo" />
-    </ReferenceInput>
+      <SelectInput optionText="name" />
+    </ReferenceInput> */}
   </Filter>
 );
 
@@ -40,40 +39,35 @@ export const ArticleList = props => {
   return (
     <List title={<ArticleTitle />} filters={<ArticleFilter />} {...props}>
       {isSmall ? (
-        // <SimpleList
-        //   primaryText={record => record.title}
-        //   secondaryText={record => `${record.views} views`}
-        //   tertiaryText={record =>
-        //     new Date(record.published_at).toLocaleDateString()
-        //   }
-        // />
         <Datagrid>
-          <TextField source="id" />
+          <TextField source="code" label="Código" />
           <ReferenceField
             label="Tipo Articulo"
-            source="idTipoArticulo"
-            reference="tipoArticulo"
+            source="articleType"
+            reference="articleType"
           >
-            <TextField source="tipo" />
+            <TextField source="name" label="Tipo de Artículo" />
           </ReferenceField>
-          <TextField source="Precio" />
-          <TextField source="Nombre Articulo" />
-          <TextField source="Comentarios" />
+          <TextField source="name" label="Nombre del Artículo" />
+          <TextField source="price" label="Precio" />
+          <TextField source="comment" label="Comentario" />
+
           <EditButton />
         </Datagrid>
       ) : (
         <Datagrid>
-          <TextField source="id" />
+          <TextField source="code" label="Código" />
           <ReferenceField
-            label="Tipo Articulo"
-            source="idTipoArticulo"
-            reference="tipoArticulo"
+            label="Tipo de Articulo"
+            source="articleType"
+            reference="articleType"
           >
-            <TextField source="tipo" />
+            <TextField source="name" label="Tipo de Articulo" />
           </ReferenceField>
-          <TextField source="Precio" />
-          <TextField source="Nombre Articulo" />
-          <TextField source="Comentarios" />
+          <TextField source="name" label="Nombre del Artículo" />
+          <TextField source="price" label="Precio" />
+          <TextField source="comment" label="Comentario" />
+
           <EditButton />
         </Datagrid>
       )}
@@ -84,13 +78,13 @@ export const ArticleList = props => {
 export const ArticleEdit = props => (
   <Edit title={<ArticleTitle />} {...props}>
     <SimpleForm>
-      <TextInput disabled source="id" />
-      <ReferenceInput source="idTipoArticulo" reference="tipoArticulo">
-        <SelectInput optionText="tipo" />
+      <TextInput source="code" label="Código" />
+      <ReferenceInput source="articleType" reference="articleType">
+        <SelectInput optionText="name" label="Tipo de Artículo" />
       </ReferenceInput>
-      <TextInput source="Precio" />
-      <TextInput source="Nombre Articulo" />
-      <TextInput multiline source="Comentarios"></TextInput>
+      <TextInput source="name" label="Nombre del Artículo" />
+      <TextInput source="price" label="Precio" />
+      <TextInput source="comment" label="Comentario" />
     </SimpleForm>
   </Edit>
 );
@@ -98,12 +92,17 @@ export const ArticleEdit = props => (
 export const ArticleCreate = props => (
   <Create title={<ArticleTitle />} {...props}>
     <SimpleForm>
-      <ReferenceInput source="idTipoArticulo" reference="tipoArticulo">
-        <SelectInput optionText="tipo" />
+      <TextInput source="code" label="Código" />
+      <ReferenceInput
+        source="articleType"
+        reference="articleType"
+        label="Tipo de Articulo"
+      >
+        <SelectInput optionText="name" label="Tipo de Artículo" />
       </ReferenceInput>
-      <TextInput source="Precio"></TextInput>
-      <TextInput source="Nombre Articulo"></TextInput>
-      <TextInput multiline source="Comentarios"></TextInput>
+      <TextInput source="name" label="Nombre del Artículo" />
+      <TextInput source="price" label="Precio" />
+      <TextInput source="comment" label="Comentario" />
     </SimpleForm>
   </Create>
 );

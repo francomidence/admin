@@ -9,13 +9,12 @@ import {
   SimpleForm,
   TextInput,
   Create,
-  Filter,
-  SimpleList
+  Filter
 } from 'react-admin';
 
 const DriverTitle = ({ record }) => {
   return (
-    <span>Motorista </span>
+    <span>Motoristas </span>
     //<span>Tipo de articulo {record ? `"${record.title}}"` : ''}</span>
   );
 };
@@ -31,22 +30,18 @@ export const DriverList = props => {
   return (
     <List title={<DriverTitle />} filters={<DriverFilter />} {...props}>
       {isSmall ? (
-        // <SimpleList
-        //   primaryText={record => record.title}
-        //   secondaryText={record => `${record.views} views`}
-        //   tertiaryText={record =>
-        //     new Date(record.published_at).toLocaleDateString()
-        //   }
-        // />
         <Datagrid>
-          <TextField source="id" />
-          <TextField source="nombre" />
+          {/* <TextField source="id" /> */}
+          <TextField source="name" label="Nombre" />
+          <TextField source="phone" label="Telefono" />
+
           <EditButton />
         </Datagrid>
       ) : (
         <Datagrid>
-          <TextField source="id" />
-          <TextField source="nombre" />
+          {/* <TextField source="id" /> */}
+          <TextField source="name" label="Nombre" />
+          <TextField source="phone" label="Telefono" />
           <EditButton />
         </Datagrid>
       )}
@@ -58,7 +53,8 @@ export const DriverEdit = props => (
   <Edit title={<DriverTitle />} {...props}>
     <SimpleForm>
       <TextInput disabled source="id" />
-      <TextInput source="nombre" />
+      <TextInput source="name" label="Nombre" />
+      <TextInput source="phone" label="Telefono" />
     </SimpleForm>
   </Edit>
 );
@@ -66,7 +62,8 @@ export const DriverEdit = props => (
 export const DriverCreate = props => (
   <Create title={<DriverTitle />} {...props}>
     <SimpleForm>
-      <TextInput source="nombre"></TextInput>
+      <TextInput source="name" label="Nombre"></TextInput>
+      <TextInput source="phone" label="Telefono"></TextInput>
     </SimpleForm>
   </Create>
 );

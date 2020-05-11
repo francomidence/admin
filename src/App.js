@@ -3,7 +3,7 @@ import React from 'react';
 //import { Admin, Resource, ListGuesser } from 'react-admin';
 import { Admin, Resource, ListGuesser } from 'react-admin';
 //import { UserList } from './Components/users';
-import { PostList, PostEdit, PostCreate } from './Components/posts';
+//import { PostList, PostEdit, PostCreate } from './Components/posts';
 import { ArticleCreate, ArticleEdit, ArticleList } from './Components/article';
 import {
   ArticleTypeCreate,
@@ -14,13 +14,11 @@ import { ShopCreate, ShopEdit, ShopList } from './Components/shop';
 import { OrderCreate, OrderEdit, OrderList } from './Components/order';
 import { DriverCreate, DriverEdit, DriverList } from './Components/driver';
 
-import jsonServerProvider from 'ra-data-json-server';
+//import jsonServerProvider from 'ra-data-json-server';
 import './App.css';
 //Icons
-import PostIcon from '@material-ui/icons/Book';
 import UserIcon from '@material-ui/icons/Group';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import ListIcon from '@material-ui/icons/List';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import MotorcycleIcon from '@material-ui/icons/Motorcycle';
@@ -28,25 +26,26 @@ import MotorcycleIcon from '@material-ui/icons/Motorcycle';
 import Dashboard from './Components/dashboard';
 import AuthProvider from './Components/authProvider';
 
-//import DataProvider from './Components/dataprovider';
+import DataProvider from './Components/dataprovider';
 //Language
 import spanishMessages from '@blackbox-vision/ra-language-spanish';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 
 const i18nProvider = polyglotI18nProvider(() => spanishMessages, 'es');
 
-const dataProvider = jsonServerProvider(
-  'https://my-json-server.typicode.com/francomidence/admin'
-);
+// const dataProvider = jsonServerProvider(
+//   'https://my-json-server.typicode.com/francomidence/admin'
+// );
+
 const App = () => (
   <Admin
     i18nProvider={i18nProvider}
     authProvider={AuthProvider}
     dashboard={Dashboard}
-    dataProvider={dataProvider}
+    dataProvider={DataProvider}
   >
     <Resource
-      name="orden"
+      name="order"
       list={OrderList}
       edit={OrderEdit}
       create={OrderCreate}
@@ -61,34 +60,43 @@ const App = () => (
       icon={PostIcon}
     ></Resource> */}
     <Resource
-      name="articulo"
+      name="article"
       list={ArticleList}
       edit={ArticleEdit}
       create={ArticleCreate}
       icon={AssignmentIcon}
+      options={{ label: 'Artículos' }}
     ></Resource>
     <Resource
-      name="tipoArticulo"
+      name="articleType"
       list={ArticleTypeList}
       edit={ArticleTypeEdit}
       create={ArticleTypeCreate}
-      options={{ label: 'Tipo Articulos' }}
+      options={{ label: 'Tipos de Artículos' }}
     ></Resource>
     <Resource
-      name="tienda"
+      name="store"
       list={ShopList}
       edit={ShopEdit}
       create={ShopCreate}
       icon={StorefrontIcon}
+      options={{ label: 'Local' }}
     ></Resource>
-    <Resource name="usuario" list={ListGuesser} icon={UserIcon}></Resource>
     <Resource
-      name="motorista"
+      name="users"
+      list={ListGuesser}
+      icon={UserIcon}
+      options={{ label: 'Usuarios' }}
+    ></Resource>
+    <Resource
+      name="driver"
       list={DriverList}
       edit={DriverEdit}
       create={DriverCreate}
       icon={MotorcycleIcon}
+      options={{ label: 'Motoristas' }}
     ></Resource>
+    <Resource name="status"></Resource>
   </Admin>
 );
 

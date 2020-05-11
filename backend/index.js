@@ -20,6 +20,19 @@ require('./middleware/passport')(passport);
 
 //Use router Middleware
 app.use('/api/users', require('./routes/users'));
+const articleTypeRouter = require('./routes/articleType');
+const storeRouter = require('./routes/store');
+const articleRouter = require('./routes/article');
+const orderRouter = require('./routes/order');
+const statusRouter = require('./routes/status');
+const driverRouter = require('./routes/driver');
+
+app.use('/api/articletype', articleTypeRouter);
+app.use('/api/store', storeRouter);
+app.use('/api/article', articleRouter);
+app.use('/api/order', orderRouter);
+app.use('/api/status', statusRouter);
+app.use('/api/driver', driverRouter);
 
 const startApp = async () => {
   try {
@@ -27,7 +40,8 @@ const startApp = async () => {
     await connect(DB, {
       useFindAndModify: true,
       useUnifiedTopology: true,
-      useNewUrlParser: true
+      useNewUrlParser: true,
+      useCreateIndex: true
     });
     success({ message: `DB started on port \n${PORT}`, badge: true });
     //Listening for server

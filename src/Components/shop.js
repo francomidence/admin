@@ -9,13 +9,12 @@ import {
   SimpleForm,
   TextInput,
   Create,
-  Filter,
-  SimpleList
+  Filter
 } from 'react-admin';
 
 const ShopTitle = ({ record }) => {
   //return <span>Shop {record ? `"${record.title}}"` : ''}</span>;
-  return <span>Tienda </span>;
+  return <span>Locales </span>;
 };
 
 const ShopFilter = props => (
@@ -29,22 +28,15 @@ export const ShopList = props => {
   return (
     <List title={<ShopTitle />} filters={<ShopFilter />} {...props}>
       {isSmall ? (
-        // <SimpleList
-        //   primaryText={record => record.title}
-        //   secondaryText={record => `${record.views} views`}
-        //   tertiaryText={record =>
-        //     new Date(record.published_at).toLocaleDateString()
-        //   }
-        // />
         <Datagrid>
-          <TextField source="id" />
-          <TextField source="ubicacion" />
+          {/* <TextField source="id" /> */}
+          <TextField source="name" label="Nombre" />
           <EditButton />
         </Datagrid>
       ) : (
         <Datagrid>
-          <TextField source="id" />
-          <TextField source="ubicacion" />
+          {/* <TextField source="id" /> */}
+          <TextField source="name" label="Nombre" />
           <EditButton />
         </Datagrid>
       )}
@@ -53,10 +45,10 @@ export const ShopList = props => {
 };
 
 export const ShopEdit = props => (
-  <Edit title={<ShopTitle />} title={<ShopTitle />} {...props}>
+  <Edit title={<ShopTitle />} {...props}>
     <SimpleForm>
       <TextInput disabled source="id" />
-      <TextInput source="ubicacion" />
+      <TextInput source="name" label="Nombre" />
     </SimpleForm>
   </Edit>
 );
@@ -64,7 +56,7 @@ export const ShopEdit = props => (
 export const ShopCreate = props => (
   <Create title={<ShopTitle />} {...props}>
     <SimpleForm>
-      <TextInput source="ubicacion"></TextInput>
+      <TextInput source="name" label="Nombre"></TextInput>
     </SimpleForm>
   </Create>
 );

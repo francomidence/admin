@@ -10,21 +10,25 @@ import {
   TextInput,
   Create,
   Filter,
-  SimpleList,
   ArrayField,
-  SingleFieldList,
   ChipField,
   NumberField,
-  DateField,
   DateInput,
   ArrayInput,
   SimpleFormIterator,
-  NumberInput
+  NumberInput,
+  DateField,
+  ReferenceField,
+  ReferenceArrayInput,
+  SelectArrayInput,
+  SelectInput,
+  ReferenceInput,
+  AutocompleteInput
 } from 'react-admin';
 
 const OrderTitle = ({ record }) => {
   return (
-    <span>Orden</span>
+    <span>Ordenes</span>
     //<span>Tipo de articulo {record ? `"${record.title}}"` : ''}</span>
   );
 };
@@ -35,53 +39,116 @@ const OrderFilter = props => (
   </Filter>
 );
 
+const TotalField = ({ source, record = {} }) => {
+  let total = 0;
+
+  if (record) {
+    if (record.articles) {
+      record.articles.forEach(article => {
+        let subTotal = article.price * article.quantity;
+        console.log('article', article);
+        total += subTotal;
+      });
+    }
+    return <span>{total}</span>;
+  }
+};
+
 export const OrderList = props => {
   const isSmall = useMediaQuery(theme => theme.breakpoints.down('sm'));
+  console.log(`Soy props de LIST`, props);
+
   return (
     <List title={<OrderTitle />} filters={<OrderFilter />} {...props}>
       {isSmall ? (
-        // <SimpleList
-        //   primaryText={record => record.title}
-        //   secondaryText={record => `${record.views} views`}
-        //   tertiaryText={record =>
-        //     new Date(record.published_at).toLocaleDateString()
-        //   }
-        // />
         <Datagrid>
-          <TextField source="id" />
-          <TextField source="Nombre Cliente" />
-          <TextField source="Numero Telefono" />
-          <TextField source="Direccion" />
-          <TextField source="Fecha Vendida" />
-          <TextField source="Fecha Entrega" />
-          <ArrayField source="Articulos">
+          {/* <TextField source="id" /> */}
+          <TextField source="code" label="Código" />
+          <TextField source="customer" label="Cliente" />
+          <TextField source="phone" label="Teléfono" />
+          <TextField source="address" label="Dirección" />
+          <DateField source="soldDate" label="Fecha de Venta" />
+          <DateField source="deliverDate" label="Fecha de Entrega" />
+          <ArrayField source="articles">
             <Datagrid>
-              <ChipField source="Nombre Articulo" />
-              <ChipField source="Precio" />{' '}
+              <ChipField source="quantity" />
+              <ReferenceField
+                label="Producto"
+                source="name"
+                reference="article"
+              >
+                <TextField source="name" />
+              </ReferenceField>
+              <ReferenceField label="Precio" source="name" reference="article">
+                <TextField source="price" />
+              </ReferenceField>
+              <ChipField source="comments" />
             </Datagrid>
           </ArrayField>
-          <NumberField source="Gran Total" />
-          <TextField source="Estatus Entrega" />
-          <TextField source="Motorista" />
+          <TotalField></TotalField>
+          <ReferenceField label="Tienda" source="store" reference="store">
+            <TextField source="name" />
+          </ReferenceField>
+          <ReferenceField
+            label="Estado de Entrega"
+            source="status"
+            reference="status"
+          >
+            <TextField source="status" />
+          </ReferenceField>
+          <ReferenceField label="Motorista" source="driver" reference="driver">
+            <TextField source="name" />
+          </ReferenceField>
+
+          <ReferenceField
+            label="Estado de Entrega"
+            source="status"
+            reference="status"
+          >
+            <TextField source="status" />
+          </ReferenceField>
           <EditButton />
         </Datagrid>
       ) : (
         <Datagrid>
-          <TextField source="id" />
-          <TextField source="Nombre Cliente" />
-          <TextField source="Numero Telefono" />
-          <TextField source="Direccion" />
-          <TextField source="Fecha Vendida" />
-          <TextField source="Fecha Entrega" />
-          <ArrayField source="Articulos">
+          {/* <TextField source="id" /> */}
+          <TextField source="code" label="Código" />
+          <TextField source="customer" label="Cliente" />
+          <TextField source="phone" label="Teléfono" />
+          <TextField source="address" label="Dirección" />
+          <DateField source="soldDate" label="Fecha de Venta" />
+          <DateField source="deliverDate" label="Fecha de Entrega" />
+          <ArrayField source="articles" label="Artículos">
             <Datagrid>
-              <ChipField source="Nombre Articulo" />
-              <ChipField source="Precio" />
+              <ChipField source="quantity" label="Cantidad" />
+              <ReferenceField
+                label="Producto"
+                source="name"
+                reference="article"
+              >
+                <TextField source="name" />
+              </ReferenceField>
+              <ReferenceField label="Precio" source="name" reference="article">
+                <TextField source="price" />
+              </ReferenceField>
+              <ChipField source="comments" label="Comentarios" />
             </Datagrid>
           </ArrayField>
-          <NumberField source="Gran Total" />
-          <TextField source="Estatus Entrega" />
-          <TextField source="Motorista" />
+          <TotalField></TotalField>
+          <ReferenceField label="Tienda" source="store" reference="store">
+            <TextField source="name" />
+          </ReferenceField>
+
+          <ReferenceField label="Motorista" source="driver" reference="driver">
+            <TextField source="name" />
+          </ReferenceField>
+          <ReferenceField
+            label="Estado de Entrega"
+            source="status"
+            reference="status"
+          >
+            <TextField source="status" />
+          </ReferenceField>
           <EditButton />
         </Datagrid>
       )}
@@ -89,47 +156,97 @@ export const OrderList = props => {
   );
 };
 
-export const OrderEdit = props => (
-  <Edit title={<OrderTitle />} {...props}>
-    <SimpleForm>
-      <TextInput disabled source="id" />
-      <TextInput source="Nombre Cliente" />
-      <TextInput source="Numero Telefono" />
-      <TextInput source="Direccion" />
-      <DateInput source="Fecha Vendida" />
-      <DateInput source="Fecha Entrega" />
-      <ArrayInput source="Articulos">
-        <SimpleFormIterator>
-          <TextInput label="Nombre del Articulo" source="Nombre Articulo" />
-          <TextInput label="Precio" source="Precio" />
-        </SimpleFormIterator>
-      </ArrayInput>
-      <NumberInput source="Gran Total" />
-      <TextInput source="Estatus Entrega" />
-      <TextInput source="Motorista" />
-    </SimpleForm>
-  </Edit>
-);
+export const OrderEdit = props => {
+  console.log(`Soy props de EDIT`, props);
 
-export const OrderCreate = props => (
-  <Create title={<OrderTitle />} {...props}>
-    <SimpleForm>
-      <TextInput disabled source="id" />
-      <TextInput source="Nombre Cliente" />
-      <TextInput source="Numero Telefono" />
-      <TextInput source="Direccion" />
-      <TextInput source="tipo" />
-      <DateInput source="Fecha Vendida" />
-      <DateInput source="Fecha Entrega" />
-      <ArrayInput source="Articulos">
-        <SimpleFormIterator>
-          <TextInput label="Nombre del Articulo" source="Nombre Articulo" />
-          <TextInput label="Precio" source="Precio" />
-        </SimpleFormIterator>
-      </ArrayInput>
-      <NumberInput source="Gran Total" />
-      <TextInput source="Estatus Entrega" />
-      <TextInput source="Motorista" />
-    </SimpleForm>
-  </Create>
-);
+  return (
+    <Edit title={<OrderTitle />} {...props}>
+      <SimpleForm>
+        <TextInput disabled source="id" />
+        <TextInput source="code" label="Código" />
+        <TextInput source="customer" label="Cliente" />
+        <TextInput source="phone" label="Teléfono" />
+        <TextInput source="address" label="Dirección" />
+        <DateInput source="soldDate" label="Fecha de Venta" />
+        <DateInput source="deliverDate" label="Fecha de Entrega" />
+
+        <ArrayInput source="articles" label="Artículos">
+          <SimpleFormIterator>
+            <NumberInput source="quantity" label="Cantidad" />
+
+            <ReferenceInput source="name" reference="article" label="Artículo">
+              <SelectInput optionText="name" label="Artículo" />
+            </ReferenceInput>
+
+            <ReferenceInput source="name" reference="article" label="Precio">
+              <SelectInput optionText="price" label="Precio" />
+            </ReferenceInput>
+
+            <TextInput source="comments" label="Comentarios" />
+          </SimpleFormIterator>
+        </ArrayInput>
+
+        <ReferenceInput source="store" reference="store" label="Local">
+          <SelectInput optionText="name" />
+        </ReferenceInput>
+        <ReferenceInput source="driver" reference="driver" label="Motorista">
+          <SelectInput optionText="name" />
+        </ReferenceInput>
+        <ReferenceInput
+          source="status"
+          reference="status"
+          label="Estado de Entrega"
+        >
+          <SelectInput optionText="status" />
+        </ReferenceInput>
+      </SimpleForm>
+    </Edit>
+  );
+};
+
+export const OrderCreate = props => {
+  console.log(`Soy props de CREATE`, props);
+
+  return (
+    <Create title={<OrderTitle />} {...props}>
+      <SimpleForm>
+        <TextInput source="code" label="Código" />
+        <TextInput source="customer" label="Cliente" />
+        <TextInput source="phone" label="Teléfono" />
+        <TextInput source="address" label="Dirección" />
+        <DateInput source="soldDate" label="Fecha de Venta" />
+        <DateInput source="deliverDate" label="Fecha de Entrega" />
+
+        <ArrayInput source="articles" label="Artículos">
+          <SimpleFormIterator>
+            <NumberInput source="quantity" label="Cantidad" />
+
+            <ReferenceInput source="name" reference="article" label="Artículo">
+              <SelectInput optionText="name" label="Artículo" />
+            </ReferenceInput>
+
+            <ReferenceInput source="name" reference="article" label="Precio">
+              <SelectInput optionText="price" label="Precio" />
+            </ReferenceInput>
+
+            <TextInput source="comments" label="Comentarios" />
+          </SimpleFormIterator>
+        </ArrayInput>
+
+        <ReferenceInput source="store" reference="store" label="Local">
+          <SelectInput optionText="name" />
+        </ReferenceInput>
+        <ReferenceInput source="driver" reference="driver" label="Motorista">
+          <SelectInput optionText="name" />
+        </ReferenceInput>
+        <ReferenceInput
+          source="status"
+          reference="status"
+          label="Estado de Entrega"
+        >
+          <SelectInput optionText="status" />
+        </ReferenceInput>
+      </SimpleForm>
+    </Create>
+  );
+};

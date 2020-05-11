@@ -9,13 +9,12 @@ import {
   SimpleForm,
   TextInput,
   Create,
-  Filter,
-  SimpleList
+  Filter
 } from 'react-admin';
 
 const ArticleTypeTitle = ({ record }) => {
   return (
-    <span>Tipo de articulo </span>
+    <span>Tipos de artículos </span>
     //<span>Tipo de articulo {record ? `"${record.title}}"` : ''}</span>
   );
 };
@@ -43,14 +42,14 @@ export const ArticleTypeList = props => {
         //   }
         // />
         <Datagrid>
-          <TextField source="id" />
-          <TextField source="tipo" />
+          {/* <TextField source="id" /> */}
+          <TextField source="name" label="Nombre" />
           <EditButton />
         </Datagrid>
       ) : (
         <Datagrid>
-          <TextField source="id" />
-          <TextField source="tipo" />
+          {/* <TextField source="id" /> */}
+          <TextField source="name" label="Nombre" />
           <EditButton />
         </Datagrid>
       )}
@@ -62,7 +61,7 @@ export const ArticleTypeEdit = props => (
   <Edit title={<ArticleTypeTitle />} {...props}>
     <SimpleForm>
       <TextInput disabled source="id" />
-      <TextInput source="tipo" />
+      <TextInput source="name" label="Nombre" />
     </SimpleForm>
   </Edit>
 );
@@ -70,7 +69,7 @@ export const ArticleTypeEdit = props => (
 export const ArticleTypeCreate = props => (
   <Create title={<ArticleTypeTitle />} {...props}>
     <SimpleForm>
-      <TextInput source="tipo"></TextInput>
+      <TextInput source="name" label="Nombre"></TextInput>
     </SimpleForm>
   </Create>
 );
