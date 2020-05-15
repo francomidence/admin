@@ -25,7 +25,7 @@ import {
   ReferenceInput,
   AutocompleteInput
 } from 'react-admin';
-
+let precio = 0;
 const OrderTitle = ({ record }) => {
   return (
     <span>Ordenes</span>
@@ -46,7 +46,8 @@ const TotalField = ({ source, record = {} }) => {
     if (record.articles) {
       record.articles.forEach(article => {
         let subTotal = article.price * article.quantity;
-        console.log('article', article);
+        console.log('article de component order.js', article);
+        console.log('El articulo es', article.name);
         total += subTotal;
       });
     }
@@ -56,7 +57,7 @@ const TotalField = ({ source, record = {} }) => {
 
 export const OrderList = props => {
   const isSmall = useMediaQuery(theme => theme.breakpoints.down('sm'));
-  console.log(`Soy props de LIST`, props);
+  // console.log(`Soy props de LIST`, props);
 
   return (
     <List title={<OrderTitle />} filters={<OrderFilter />} {...props}>
@@ -138,7 +139,6 @@ export const OrderList = props => {
           <ReferenceField label="Tienda" source="store" reference="store">
             <TextField source="name" />
           </ReferenceField>
-
           <ReferenceField label="Motorista" source="driver" reference="driver">
             <TextField source="name" />
           </ReferenceField>
@@ -157,7 +157,7 @@ export const OrderList = props => {
 };
 
 export const OrderEdit = props => {
-  console.log(`Soy props de EDIT`, props);
+  // console.log(`Soy props de EDIT`, props);
 
   return (
     <Edit title={<OrderTitle />} {...props}>
@@ -182,6 +182,8 @@ export const OrderEdit = props => {
               <SelectInput optionText="price" label="Precio" />
             </ReferenceInput>
 
+            <TextInput label="Precio" source="price" />
+
             <TextInput source="comments" label="Comentarios" />
           </SimpleFormIterator>
         </ArrayInput>
@@ -205,7 +207,7 @@ export const OrderEdit = props => {
 };
 
 export const OrderCreate = props => {
-  console.log(`Soy props de CREATE`, props);
+  // console.log(`Soy props de CREATE`, props);
 
   return (
     <Create title={<OrderTitle />} {...props}>
@@ -228,6 +230,8 @@ export const OrderCreate = props => {
             <ReferenceInput source="name" reference="article" label="Precio">
               <SelectInput optionText="price" label="Precio" />
             </ReferenceInput>
+
+            <TextInput label="Precio" source="price" />
 
             <TextInput source="comments" label="Comentarios" />
           </SimpleFormIterator>
